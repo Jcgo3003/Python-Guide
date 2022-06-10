@@ -80,6 +80,36 @@ op = '+';
 print(eval(op.join(l.split())))
 
 
+# Bytes and strings
+print('\n- Bytes and strings')
+# encode - returns by default an utf-8 encoded version of the string
+# Error! UnicodeDecodeError exception
+str = 'Weiß'
+print('- encode -')# from Unicode data to binary data
+rtn = str.encode(encoding='UTF-8', errors='strict')
+print(type(rtn))			# >> <class 'bytes'>
+print(rtn)					# >> b'Wei\xc3\x9f'
+
+
+# print('The encoded version (with ignore) is:', str.encode("ascii")) 
+# UnicodeEncodeError: 'ascii' codec can't encode character '\xdf'
+
+# if error ignore error
+print('ignore ', str.encode("ascii", "ignore")) # >> ignore  b'Wei'
+
+# if error Replace
+print('replace ', str.encode("ascii", "replace"))# >> replace  b'Wei?'
+
+
+print('\n- dencode -')# from binary data to Unicode data
+str = b'Wei\xc3\x9f' 
+rtn = str.decode(encoding='UTF-8',errors='strict')
+print(type(rtn))	 # >> <class 'str'>
+print(rtn)			 # >> Weiß
+
+
+# # 
+
 # -       Escape sequences       -
 # --------------------------------
 # \0 - NUL character(\u0000)
