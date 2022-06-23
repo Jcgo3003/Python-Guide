@@ -72,6 +72,11 @@ print(str[::-1])  			# >>  xof nworb kciuq ehT  RETURN string al reves
 
 
 print('\n- Miscellaneous -')
+print('- zfill -')
+rtn = 'abc'.zfill(6)		# Rellena un string con '0' hasta alcanzar el tamano dado
+print(rtn)					# -> 000abc
+
+
 print('- eval -')   		# EJECUTA una operacion que este dada como string
 rtn = eval('2 + 2')
 print(rtn)					# -> 4
