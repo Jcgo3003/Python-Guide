@@ -83,6 +83,13 @@ print('\n- Otros tipos de datos -') # En general, los objetos que tienen len ser
 print(bool([]))				# >> False
 print(bool([1, 2]))			# >> True
 
+print('- assert -')			# Prueba si una condición devuelve True
+bla = True					
+assert bla					# >>     		Nada ocurre si mientras bla sea True
+assert 1 == 1 				# >>
+# assert 1 == 10				# >> AssertionError
+
+
 print('\n- Mas alla -')		# Si no tienen metodo len, en general tenderan a ser Truthy
 def func():
 	pass
