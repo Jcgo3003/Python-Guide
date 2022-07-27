@@ -1,0 +1,4 @@
+# Pythoning 
+
+
+# ITS MORE PYTHONING WORKING WITH LIST COMPREHENTIONS OR GENERATORS than functional programing

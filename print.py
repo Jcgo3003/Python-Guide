@@ -13,3 +13,10 @@ print(*('hello', 'world')) 	# >> hello world IMPRIMIR sin
 print(*{'hello', 'world'}) 	# >> hello world IMPRIMIR sin 
 
 
+# !r -  calls the repr of the value supplied.
+# !s (str), !a (ascii) just to ease compatibility with the str.format alternative, you don't need to use them with f-strings.
+
+bla = 12
+print(f'Something {bla!r}')
+
+

@@ -93,8 +93,9 @@ print(lista)					# >> [1, 7, 2, 9, 3]
 
 # - No Destructivos -
 print('\n- No Destructivos -')
-print(sorted(lista)) 	# RETURN una lista organizada en orden alf. o numerico(opciones reverse=True)
-						# >> [1, 2, 3, 4, 5] - solo organiza un tipo a la vez not supported between instances of 'int' and 'str'
+rtn = sorted(lista) 	# RETURN una lista organizada en orden alf. o numerico(opciones reverse=True)
+print(rtn)				# >> [1, 2, 3, 4, 5] - solo organiza un tipo a la vez not supported between instances of 'int' and 'str'
+
 lista = [0, 1, 2, 3, 4]
 # - Slice/Cortar con slice notation-
 print('\nSlice/Cortar')

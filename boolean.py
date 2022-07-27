@@ -1,6 +1,5 @@
 # ----------------------------------- Boolean Expressions -----------------------------------
-
-print(True + 1 + False)
+print(True + 1 + False)								   # >> 2
 
 # Sumando True
 lines="""\ He took his vorpal sword in hand;  			
@@ -9,7 +8,7 @@ lines="""\ He took his vorpal sword in hand;
 		And stood awhile in thought.
 		""".splitlines()								# Texto 
 
-print(sum("the" in line.lower() for line in lines))		# Suma total de True 
+print(sum("the" in line.lower() for line in lines))		# >> 2			| Suma total de True 
 	
 
 print('\n- AND -')
@@ -20,6 +19,7 @@ print('\n- AND -')
 # False	True	False
 # True	False	False
 # False	False	False
+
 
 # Ejemplo
 def example_AND(x):				# AND se comporta un como 'return' 
@@ -94,6 +94,4 @@ print('\n- Mas alla -')		# Si no tienen metodo len, en general tenderan a ser Tr
 def func():
 	pass
 print(bool(func))			# >> True 
-
-
 

@@ -17,6 +17,15 @@ def div(x, y):
 div(5, 0)
 div(5, 1)
 
+# Raise Exceptions
+print('\n- Raise exceptions - ')
+n = 9
+if n > 10:
+	raise Exception('Bla bla bla bla bla')
+
+# >> Exception: Bla bla bla bla bla
+
+
 # Referencia
 # https://realpython.com/python-exceptions/
 
