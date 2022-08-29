@@ -5,6 +5,7 @@ print('----------- Tuple -----------')
 # - Asignar -
 print('\n- Crear Tuple -')
 t = ('uno', 2, [3, 4], 5 )	# CREAR un tuple con multiples elementos
+t2 = ("John", "Charles", "Mike")
 print(t)					# ('uno', 2, [3, 4], 5)
 #t = (3, )					# Si solo contiene un elemento debe llevar  ' , '  al final, si no Python no lo reconoce
 #print(t)					# >> ('uno', 2, [3, 4], 5)
@@ -23,6 +24,9 @@ print(len(t))		# >> 8  RETURN INT TAMANO del tuple.
 print(t.count(2))	# >> 2  RETURN CUENTA el numero de veces que aparece un elemento
 print(t.index(0))	# >> 1  RETURN INDICE de su primera aparicion, ValueError si no esta en el tuple
 print(t.index(0, 3, 5)) # >> 4  Opciones: element - start (optional) - end (optional)
+print(all(t))		# >> False 		RETURN True if all items in an iterable are true, otherwise False, If the iterable object is empty, returns True.
+rtn = zip(t, t2)	# Returns a zip object, where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together etc.
+print(list(rtn))	# >> [(2, 'John'), (0, 'Charles'), (0, 'Mike')]
 
 # - Contat elemenst -
 print('\n- Concat - ')
@@ -99,7 +103,40 @@ print(t_Par)				# >> (2, 4, 6, 8, 10)
 
 #- Boolean -
 print('\n- Boolean -')
+print(t)					# >> (0, 1, 2, 3, 4, 5)
 print(bool(t))				# >> True RETURN True o False
 t = ()						# Si tuple no tiene elementos sera RETURN False
 print(bool(t))				# >> False
+
+print('\n- Tuples comparison -')# Tuples are compared lexicographically(alphabetical order)
+# if they are not equal then that’s the result of the comparison. Else the second item is considered, then the third and so on.
+# - Compare the n-th items of both tuple (starting with the zero-th index) using the == operator. If both are equal, repeat this step with the next item.
+# - If all items are equal, both tuples are equal.
+t1 = (1, 2, 3)
+t2 = (4, 5, 6)
+t3 = (1, 3, 2)
+t4 = (1, 2, 3)
+t5 = (1, 3, 2, 4)
+
+print(t1 == t4)	# >> True 		| Both tuples are equal
+print(t1 == t3) # >> False		| Same elements different order
+
+# - For two unequal items, the item that is “less than” makes the tuple, that contains it, also “less than” the other tuple.
+# - If one tuple runs out of items during step 1, the shorter tuple is “less than” the longer one.
+
+print(t1 < t5) # >> true		| t1 is less than t5
+
+# - < and > do not mean "smaller then" and "greater then" but 
+# "comes before" and "comes after"; so (0, 1) "comes before" (1, 0)
+
+print(t3 > t4)  # >> True 		| (1, 3, 2) comes after (1, 2, 3)
+print(t1 > t4)	# >> False		| (1, 2, 3) comes after (1, 2, 3)
+print(t1 > t2)	# >> False		| (1, 2, 3) comes after (4, 5, 6)
+
+print('- Comparing each element with all and zip')
+rtn = all(x < y for x, y in zip(t1, t2))
+print(rtn)		# >> True
+
+rtn = all(x > y for x, y in zip(t3, t4))
+print(rtn)		# >> False
 

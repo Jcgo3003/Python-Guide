@@ -2,7 +2,7 @@
 print('----------- Listas -----------')
 # Coleccion ordenada de elementos, mutable
 # - Asignar -
-print('\n- Crear lista -')
+print('- Crear lista -')
 lista = ['uno', 2, [3, 4], 5 ]	# CREAR una lista con multiples elementos
 print(lista)					# >> ['uno', 2, [3, 4], 5]
 
@@ -70,6 +70,8 @@ print(len(lista))		# RETURN eltamano de la lista en un int
 
 print(lista.count(2))	# >> 1			RETURN numero de veces que aparece un elemento
 print(lista.index(2))	# >> 1			RETURN numero de indice en el que aparece un elemento
+print(all(lista))		# >> False 		RETURN True if all items in an iterable are true, otherwise False, If the iterable object is empty, returns True.
+
 
 # - Destructivo -
 print('\n- Destructivos -')

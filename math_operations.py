@@ -83,6 +83,12 @@ print(math.dist(l1, l2))# >> 1.4142 ... 	Encuentra la distancia euclidiana(inclu
 print('\n- Maximo común divisor -')
 print(math.gcd(18, 30))			# -> 6
 
+print('\n- minimo común multiplo -')
+print(math.lcm(18, 30))			# -> 90
+
+print('\n- Factorial -')
+print(math.factorial(5))		# -> 120
+
 # Miscellaneous
 print('\n- Miscellaneous -')
 print('- string operations to Math -')

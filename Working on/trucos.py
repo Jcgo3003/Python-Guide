@@ -25,3 +25,16 @@ print(n)						# 1
 
 if n == 1: print('uno'); n=5;print('Tercer accion') # >> uno tercer accion 
 print(n)						# 5
+
+# Bitwise odd and even numbers
+# Odd - Went odd will return 1
+l = [x for x in range(11) if x & 1] # Normaly you would use if x % 2
+print(l)		# >> [1, 3, 5, 7, 9]
+
+# Even - Went even will return 0
+l = [x for x in range(11) if (x & 1) == 0] # Normaly you would use if (x % 2) == 0]
+print(l)		# >> [0, 2, 4, 6, 8, 10]
+
+
+
+

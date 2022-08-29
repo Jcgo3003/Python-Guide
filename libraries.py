@@ -38,3 +38,15 @@ time = timeit.timeit(setup = mysetup,
                      stmt = mycode,
                      number = 10000)
 print(f'My code run in {time} seconds')
+
+print('Bitwise operations')
+import operator     # operator library lets you perform also bitwise operations
+x = operator.iand(1, 6);
+print(x, 1 & 6 ) 
+
+x = operator.ior(1, 6);
+print(x, 1| 6 )
+
+x = operator.ixor(1, 4) # xor is AVAILABLE in this library
+print(x)
+

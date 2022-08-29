@@ -1,7 +1,5 @@
-
 # ----------------------------------------------------------- Classes ------------------------------------------------------------
 # - Una clase son las instrucciones para crear una instancia, son celdas vacías que representan a una instancia(sujeto).
-
 print('- Classes -')
 class Tu_clase:						# CREANDO la clase, por convencion se declara primera letra en Mayúscula.
 	"""Description de la clase en doctrina""" # Docstring con information sobre la clase.

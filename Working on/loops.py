@@ -18,6 +18,15 @@ l = [x for x in range(11) if not x%2]
 print(l)				 	# >> [0, 2, 4, 6, 8, 10]
 
 
+print('\nWhile true loop')
+def true(l):
+	while True:
+		if len(l) > 0: l.pop()
+		else: return not l
+
+l = [*range(10)]
+rtn = true(l)
+print(rtn)					# >> True
 
 
 						  

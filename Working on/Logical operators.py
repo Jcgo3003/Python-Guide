@@ -1,4 +1,12 @@
-# Short Circuiting
+print('Logical operators')
+print('Onliners')
+x = 20
+if 20<=x<=30:			# ONLY works in Python
+	print('Number between 20 and 30')
+
+
+
+print('\nShort Circuting')# Short Circuiting
 # - and | Si valor de la izquierda es false | Derecha ni si quiera sera evaluada
 print('- and -')# Si valor de la izquierda True | Return valor de la derecha
 rtn = False and 'hello'
@@ -41,8 +49,8 @@ rtn = 5 + 2*(n>0)
 print(rtn) 				# >> 5
 
 n = 1
-rtn = 5 =-(n<1)	# 5 + 1 only if n < 1
-
+rtn = 5 - (n<1)	# 5 + 1 only if n < 1
+print(rtn)		# 5
 
 # Lista 
 print('\n- Lista -')
